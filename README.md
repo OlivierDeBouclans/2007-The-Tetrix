@@ -2,9 +2,9 @@
 
 ![2015-01-27_16h57_33](https://cloud.githubusercontent.com/assets/10437041/5921707/2371596c-a646-11e4-88d3-e84615f9e936.png)
 
-*  Click here to watch a [short demonstration video](http://youtu.be/76CstDxUldo)
-*  Click here to see the [commented version](http://thomasburleson.github.io/angularjs-Quizzler/test/testRunner.html) 
-*  Feel free to download the [demo version](https://github.com/OlivierDeBouclans/2007-The-Tetrix/raw/master/TryMe-Tetrix.rar) to test project 
+*  Click here to watch a [short demonstration video](http://youtu.be/76CstDxUldo) 
+*  Click here to see the [commented version](http://youtu.be/rl1jqGh2mFQ) (in french [here](http://youtu.be/W6j-DrSJQgk) )
+*  Feel free to download the [demo version](https://github.com/OlivierDeBouclans/2007-The-Tetrix/raw/master/TryMe-Tetrix.rar) to test the project 
 
 ---
 
@@ -18,7 +18,7 @@ That’s when I decided to learn programing on computer. I found some tutorial f
 
 #### What
 
-As soon as I finished the tutorials, I wanted to try to program a full game. Among all the “simple” game I have in mind, I chose **the Tetris**. It was a good way too test all the things I had learn with these tutorials, a quite fun too.
+As soon as I finished the tutorials, I wanted to try to program a full game. Among all the “simple” game I have in mind, I chose **the Tetris**. It was a good way too test all the things I had learn with these tutorials, and quite fun too.
 
 #### How
 
@@ -28,7 +28,7 @@ This project was developed in **C** using the **SLD library**. SDL is quite a co
 
 #### Note
 
-As it was my first program, it’s of course full of terrible mistakes like memory loss (plus freeing local variables…) or awful design. Nonetheless the program is fully finished with highscore, option and even a graphical theme XD
+As it was my first program, it’s of course full of terrible mistakes like memory loss (plus freeing local variables…) or awful design. Nonetheless the program is fully finished with highscore, option and no bugs (or at least no obvious ones)
 
 ##Images
 
