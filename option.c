@@ -14,9 +14,8 @@ void AffichageDesOptions ( SDL_Surface *Ecran)
  SDL_Event Event;
  static SDL_Surface *Fond, *PetitCarre[3], *Ligne;
  static SDL_Rect Coordonnee0 = {0,0}, CoordonneCarre[3], CoordonneeLigne = {22,232};
-
- SDL_EnableKeyRepeat(50,100);
  
+ SDL_EnableKeyRepeat(50,100);
  /* Initialisation des coordonnées des petit carré */
  CoordonneCarre[0].x = 142;
  CoordonneCarre[0].y = 215;
@@ -87,7 +86,7 @@ void AffichageDesOptions ( SDL_Surface *Ecran)
  /* Boucle de choix des options */
  while(Continuer)
       {SDL_WaitEvent(&Event);
-       //if(Event.type == SDL_QUIT){exit(0);}
+       if(Event.type == SDL_QUIT){exit(0);}
        if(Event.type == SDL_KEYDOWN){
          switch(Event.key.keysym.sym)
              {case SDLK_ESCAPE:
@@ -151,7 +150,7 @@ void AffichageDesOptions ( SDL_Surface *Ecran)
        
  /* Ecriture des nouvelles options */
  FichierINI = fopen( "Files\\Tetrix.ini", "w");
- //if ( FichierINI == NULL) {exit(0);}
+ if ( FichierINI == NULL) {exit(0);}
  fprintf(FichierINI, "%ld %ld %ld", FormatDeLEcran, Niveau, Handicap);
  fclose(FichierINI);
  
@@ -186,14 +185,14 @@ void Options( int *FormatDeLEcran, int *Niveau, int *Handicap)
 {/* Initialisation */
  FILE* FichierINI;
  FichierINI = fopen( "Files\\Tetrix.ini", "r");
- //if ( FichierINI == NULL) {exit(0);}
+ if ( FichierINI == NULL) {exit(0);}
  
  /* Lecture des options */
  fscanf(FichierINI, "%ld %ld %ld", FormatDeLEcran, Niveau, Handicap);
  
  /* Fermeture */
- free(FichierINI);
  fclose(FichierINI);
+ free(FichierINI);
 }
 
 

@@ -5,36 +5,36 @@
 #include "menu.h"
 #include "pause.h"
 #include "main.h"
-#include "option.h"
-#include "jeu.h"
 
 
 int main(int argc, char *argv[])
 {/* Initialisation principale */
- int Stop = 0, FormatDeLEcran = 2, Niveau = 0, Handicap = 0;
-
+ 
+ /* Initialisation de l'écran */
  SDL_Rect Coordonnee0 = {0,0};
  SDL_Surface *Ecran;
  SDL_Surface *Fond;
+
+ int Stop = 0, FormatDeLEcran = 2, Niveau = 0, Handicap = 0;
 
  SDL_Init(SDL_INIT_VIDEO);
  TTF_Init();
  SDL_WM_SetCaption("The Tetrix", NULL);
  SDL_WM_SetIcon(SDL_LoadBMP("Ressources\\Icone.bmp"), NULL);
  SDL_ShowCursor(SDL_DISABLE);
- 
+
  /* Prise en compte des options */
  Options( &FormatDeLEcran, &Niveau, &Handicap); 
- 
- /* Initialisation de l'écran */
+ 		 
  if ( FormatDeLEcran == 1 ) {Ecran = SDL_SetVideoMode( ( 10 * CARRE ) + MARGE, LONGUEURE, 32, SDL_HWSURFACE  | SDL_DOUBLEBUF | SDL_FULLSCREEN);}
  if ( FormatDeLEcran == 2 ) {Ecran = SDL_SetVideoMode( ( 10 * CARRE ) + MARGE, LONGUEURE, 32, SDL_HWSURFACE  | SDL_DOUBLEBUF );} 
  
  /* Affichage initiale */
+
  Fond = SDL_LoadBMP("Ressources\\Ecran Titre.bmp");
  SDL_BlitSurface( Fond, NULL, Ecran, &Coordonnee0);
  SDL_Flip(Ecran);
- PauseS(*Ecran);
+ PauseS(Ecran);
  SDL_FreeSurface(Fond);
  
  /* Lancement du jeu */

@@ -14,11 +14,11 @@ void PauseS( SDL_Surface *Ecran)
  while(Continuer)
        {SDL_WaitEvent(&Event);
         if ( Event.key.keysym.sym == SDLK_SPACE ) { Continuer = 0;}
-       // if ( Event.type == SDL_QUIT ) { exit(0); }
+        if ( Event.type == SDL_QUIT ) { exit(0); }
        }
- 
- free(&Continuer);
- free(&Event);           
+
+ //free(&Continuer);
+ //free(&Event);           
 }
 
 
@@ -36,11 +36,11 @@ void PauseE( SDL_Surface *Ecran)
         if (Event.type == SDL_KEYDOWN) 
            {if ( Event.key.keysym.sym == SDLK_RETURN || Event.key.keysym.sym == SDLK_ESCAPE ) 
                { Continuer = 0;}}
-        //if ( Event.type == SDL_QUIT ) { exit(0); }
+        if ( Event.type == SDL_QUIT ) { exit(0); }
        }
   
- free(&Continuer);
- free(&Event);       
+ //free(&Continuer);
+ //free(&Event);       
 }
        
 

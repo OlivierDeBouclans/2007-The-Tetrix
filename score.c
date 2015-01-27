@@ -47,7 +47,7 @@ void AffichageDuScore( SDL_Surface *Ecran)
  FichierScore = fopen( "Files\\men5.scrs", "r");
  
  /* Lecture des scores */
- //if ( FichierScore == NULL) {exit(0);};
+ if ( FichierScore == NULL) {exit(0);};
  fscanf(FichierScore, "%ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld", &Lignes[0], &Points[0], &Lignes[1], &Points[1] ,&Lignes[2], &Points[2],&Lignes[3], &Points[3],&Lignes[4], &Points[4],&Lignes[5], &Points[5],&Lignes[6], &Points[6],&Lignes[7], &Points[7], &Lignes[8], &Points[8], &Lignes[9], &Points[9]);
 
  /* Ecriture des scores */ 
@@ -117,7 +117,7 @@ int EntreDuScore(int NombreDeLignes, int NombreDePoints)
  FichierScore = fopen( "Files\\men5.scrs", "r");
 
  /* Lecture des scores */
-// if ( FichierScore == NULL) {exit(0);};
+ if ( FichierScore == NULL) {exit(0);};
  fscanf(FichierScore, "%ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld", &Lignes[0], &Point[0], &Lignes[1], &Point[1] ,&Lignes[2], &Point[2],&Lignes[3], &Point[3],&Lignes[4], &Point[4],&Lignes[5], &Point[5],&Lignes[6], &Point[6],&Lignes[7], &Point[7], &Lignes[8], &Point[8], &Lignes[9], &Point[9]);
  
  /* Comparaison des scores du score */
@@ -135,7 +135,7 @@ int EntreDuScore(int NombreDeLignes, int NombreDePoints)
  /* Ecriture du score */
  fclose(FichierScore);
  FichierScore == fopen( "Files\\men5.scrs", "w+");
-// if ( FichierScore == NULL) {exit(0);};
+ if ( FichierScore == NULL) {exit(0);};
  fprintf( FichierScore, "%ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld", Lignes[0], Point[0], Lignes[1], Point[1] ,Lignes[2], Point[2], Lignes[3], Point[3], Lignes[4], Point[4], Lignes[5], Point[5], Lignes[6], Point[6], Lignes[7], Point[7], Lignes[8], Point[8], Lignes[9], Point[9]);
  
  /* Retourne s'il y a eut un record */

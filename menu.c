@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <SDL.h>
-#include <SDL_ttf.h>
 #include "pause.h"
 #include "score.h"
 #include "option.h"
@@ -48,7 +47,7 @@ void Menu( SDL_Surface *Ecran, int *Stop)
  /* Boucle du choix dans le menu */
  while(Continuer)
       {SDL_WaitEvent(&Event);
-       //if(Event.type == SDL_QUIT){exit(0);}
+       if(Event.type == SDL_QUIT){exit(0);}
        if(Event.type == SDL_KEYDOWN){
         switch(Event.key.keysym.sym)
                {case SDLK_DOWN: 
@@ -89,7 +88,7 @@ void Menu( SDL_Surface *Ecran, int *Stop)
  /* Conséquences du choix */
  switch(z)
        {case 0: 
-             Tetrix(*Ecran);
+             Tetrix(Ecran);
         break;
         case 1:      
              AffichageDesOptions(Ecran);
@@ -99,7 +98,7 @@ void Menu( SDL_Surface *Ecran, int *Stop)
              SDL_BlitSurface( Fond, NULL, Ecran, &Coordonnee0);
              SDL_Flip(Ecran);
              SDL_FreeSurface(Fond);       
-             PauseE(*Ecran);
+             PauseE(Ecran);
         break;
         case 3:      
               AffichageDuScore(Ecran);
@@ -109,7 +108,7 @@ void Menu( SDL_Surface *Ecran, int *Stop)
                SDL_FreeSurface(Fond);
                TTF_Quit();
                SDL_Quit();
-               //exit(0);
+               exit(0);
         break;}    
 }
  

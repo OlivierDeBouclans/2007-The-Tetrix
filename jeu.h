@@ -5,7 +5,7 @@
 #define CARRE     30
 #define MARGE     150
 
-void Tetrix(SDL_Surface);
+void Tetrix(SDL_Surface*);
 int Rotation( int );
 void CaracteristiqueDesBloc();
 
